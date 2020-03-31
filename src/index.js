@@ -1,17 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import List from './List';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const list = {
+	title: 'Phone Features',
+	cards: [
+		{
+			title: 'subwoofer',
+			id: 1
+		},
+		{
+			title: 'non-porous washable',
+			id: 2
+		},
+		{
+			title: 'wings',
+			id: 3
+		},
+		{
+			title: 'Beveled Bezel',
+			id: 4
+		},
+		{
+			title: 'Bezeled Bevel',
+			id: 5
+		},
+		{
+			title: 'Seadless',
+			id: 6
+		}
+	]
+};
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<List list={list} />, document.querySelector('#root'));
